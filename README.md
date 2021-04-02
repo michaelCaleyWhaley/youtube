@@ -1,2 +1,3 @@
-# quick and easy
-This folder contains a simple website built with html and css. Purposely avoiding any advanced layout or applications where Javascript is required.
+# youtube
+
+Master folder which will contain sub directories. Each directory will related to a specific youtube project and will most consist of materials developed during or in preperation for filming.
