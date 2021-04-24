@@ -1,0 +1,169 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eeeff1;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 50px;
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  color: #1a1b1f;
+}
+
+.nav__icon {
+  display: inline-block;
+  width: 30px;
+}
+
+.nav__links {
+  display: inline-flex;
+}
+
+.nav__link {
+  align-self: center;
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav__anchor {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.nav__anchor:hover {
+  background-color: #dbdada;
+  color: #1a1b1f;
+}
+
+.nav__anchor--active {
+  background-color: #1a1b1f;
+  color: #eeeff1;
+  border-radius: 8px;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 100px auto 0;
+  width: 100%;
+}
+
+.section {
+  margin: 120px auto 0;
+  padding: 0 15px;
+}
+
+.profile {
+  display: flex;
+}
+
+.profile__pic {
+  width: 50%;
+  height: auto;
+  max-width: 300px;
+}
+
+.profile__intro {
+  margin: 0 0 0 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.about__pic {
+  width: 100%;
+  height: auto;
+}
+
+.contact__box {
+  display: flex;
+  justify-content: space-evenly;
+  border: solid 2px #1a1b1f;
+  border-radius: 8px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.contact__headline {
+  flex-basis: 50%;
+  margin: 0 10px 0 0;
+}
+
+.contact__method {
+  margin: 5px 0;
+}
+
+.footer {
+  margin: 100px 0 20px;
+  text-align: center;
+}
+
+.footer__list {
+  display: inline-flex;
+}
+
+.footer__item {
+  margin: 0 10px;
+}
+
+@media all and (max-width: 680px) {
+  .profile__pic {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .section {
+    display: block;
+    margin: 80px auto 0;
+  }
+
+  .profile__intro {
+    margin: 20px 0 0;
+    padding: 0;
+  }
+
+  .contact__box {
+    display: block;
+  }
+}

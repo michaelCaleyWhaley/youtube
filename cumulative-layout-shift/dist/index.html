@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cumulative layout shift</title>
+    <meta name="description" content="Cumulative layout shift" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="nav">
+      <svg
+        class="nav__icon"
+        aria-hidden="true"
+        focusable="false"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 512"
+      >
+        <path
+          fill="currentColor"
+          d="M624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"
+        ></path>
+      </svg>
+      <ul class="nav__links">
+        <li class="nav__link">
+          <a class="nav__anchor nav__anchor--active" href="#home" title="Home"
+            >Home</a
+          >
+        </li>
+        <li class="nav__link">
+          <a class="nav__anchor" href="#about" title="About">About</a>
+        </li>
+        <li class="nav__link">
+          <a class="nav__anchor" href="#contact" title="Contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <div id="home" class="section profile">
+        <img
+          class="profile__pic"
+          src="./img/profile.jpeg"
+          alt="profile pic"
+          width="600"
+          height="600"
+        />
+        <div class="profile__intro">
+          <h1>Hi there!</h1>
+          <p>
+            Britney Jean Spears (born December 2, 1981) is an American singer,
+            songwriter, dancer, and actress. She is credited with influencing
+            the revival of teen pop during the late 1990s and early 2000s, for
+            which she is referred to as the “Princess of Pop”.
+          </p>
+        </div>
+      </div>
+
+      <div id="about" class="section">
+        <h2>About</h2>
+        <p>
+          Britney Jean Spears (born December 2, 1981) is an American singer,
+          songwriter, dancer, and actress. She is credited with influencing the
+          revival of teen pop during the late 1990s and early 2000s, for which
+          she is referred to as the “Princess of Pop”. After appearing in stage
+          productions and television series, Spears signed with Jive Records in
+          1997 at age 15. Her first two studio albums, certified diamond in the
+          US, …Baby One More Time (1999) and Oops!… I Did It
+        </p>
+        <img
+          class="about__pic"
+          src="./img/desk.jpg"
+          alt="cool work space"
+          height="346"
+          width="970"
+        />
+      </div>
+
+      <div id="contact" class="section">
+        <div class="contact__box">
+          <div class="contact__headline">
+            <h3>
+              Want to get in<br />
+              touch?
+            </h3>
+            <p>
+              I respond to all modes of contact within 48 hours. If you need me
+              faster than that send cash.
+            </p>
+          </div>
+          <div>
+            <ul>
+              <li class="contact__method">
+                For Queries regarding Britney Spears drop me a message.<br />
+                <strong>Email:</strong>
+                youremailaddress@email.com
+              </li>
+              <li class="contact__method">
+                If you urgently need to hear my voice call me.<br />
+                <strong>Telephone:</strong>
+                07756440889
+              </li>
+              <li class="contact__method">
+                To visit my LinkedIn portfolio.<br />
+                <strong
+                  ><a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/michael-c-132245a9"
+                    title="my linkedin page"
+                    >LinkedIn</a
+                  ></strong
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">© 2021</li>
+        <li class="footer__item">Michael Caley</li>
+      </ul>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "simple-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open 'Google Chrome'",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "mini-css-extract-plugin": "^1.5.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.0.5",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.31.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
