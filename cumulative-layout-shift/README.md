@@ -1,9 +1,6 @@
-# simple-webpack
+# Cumulative layout shift
+A project demonstrating an element/s which cause a negative cumulative layout shift score, and the measures which you can take to reduce this affect.
 
-Simple webpack setup including sass loader and webpack-dev-server. 
-
-Scripts:
- 1. To start dev server, '**npm run start**'.   
- 2. To run build, '**npm run build**'.
-
-Mode is default set to 'development'
+## Notes
+* webpack is not a prerequisite for solving CLS.
+* utilises webpack and hot reload for ease of development.
