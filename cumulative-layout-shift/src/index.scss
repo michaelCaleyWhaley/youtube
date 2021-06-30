@@ -167,3 +167,13 @@ h3 {
     display: block;
   }
 }
+
+.slideshow {
+  display: flex;
+  overflow: hidden;
+
+  &__slide {
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
