@@ -1,0 +1,18 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "ignorePatterns": ["node_modules/"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "jsx-a11y/anchor-is-valid": "Off",
+    "no-console": "off",
+    "import/extensions": "off"
+  }
+}
