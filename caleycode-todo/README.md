@@ -4,7 +4,7 @@ This todo app is loosely designed to look and function like Google keep.
 
 Front end application only, no fancy APIs were used in the creation of this todo list app.
 
-![alt text](https://github.com/michaelCaleyWhaley/youtube/blob/master/caleycode-todo/todo-preview.png)
+![app preview](https://github.com/michaelCaleyWhaley/youtube/blob/master/caleycode-todo/todo-preview.png)
 
 ## start folder
 
