@@ -5,10 +5,30 @@
   <meta charset="utf-8">
   <title>caleyCodeTodo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 
 <body>
-  <h1>Hello world</h1>
+  <main class="content-wrap">
+    <h1 class="content-wrap__header">Todo list</h1>
+
+    <div class="todo__wrap">
+
+      <ul class="todo__list">
+        <li class="todo__item"><button class="todo__check-btn"><i
+              class="todo__check fa-solid fa-check"></i></button>First thing to do
+          <button class="todo__remove-btn"><i class="todo__cross fa-solid fa-plus"></i></button>
+        </li>
+      </ul>
+
+      <form class="todo-form">
+        <submit class="todo-form__submit"><i class="todo-form__plus fa-solid fa-plus"></i></submit>
+        <input class="todo-form__input" type="text" required placeholder="Take a note..." />
+      </form>
+    </div>
+  </main>
+
 </body>
 
 </html>

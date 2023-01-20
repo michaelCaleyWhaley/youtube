@@ -1,0 +1,29 @@
+@import "./style-vars.scss";
+
+html,
+body {
+  padding: 0;
+  background-color: $bgColor;
+  color: $textColor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+}
+
+button {
+  background-color: $bgColor;
+  color: $textColor;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+input,
+button,
+p,
+li {
+  font-size: 1rem;
+}

@@ -1,4 +1,92 @@
-html,
-body {
-  padding: 0;
+@import "./style-vars.scss";
+
+.content-wrap {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+
+  &__header {
+    margin: 0 0 20px;
+  }
+}
+
+.todo {
+  &__wrap {
+    border: 1px solid $textColor;
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 6px;
+
+    &--checked {
+      text-decoration: line-through;
+    }
+  }
+
+  &__check {
+    width: 16px;
+    height: 16px;
+    margin-right: 12px;
+    border: 1px solid $textColor;
+    color: transparent;
+
+    .todo__item--checked & {
+      color: $textColor;
+    }
+  }
+
+  &__remove-btn {
+    position: absolute;
+    right: -12px;
+    display: none;
+    padding: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: transparent;
+
+    .todo__item:hover & {
+      display: block;
+    }
+  }
+
+  &__cross {
+    transform: rotate(45deg);
+  }
+}
+
+.todo-form {
+  margin: 20px 0 0;
+  display: flex;
+
+  &__input {
+    background-color: $bgColor;
+    color: $textColor;
+    border: none;
+    outline: none;
+    display: block;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+
+  &__plus {
+    width: 14px;
+    height: 18.5px;
+    margin-right: 12px;
+  }
+
+  &__submit {
+    cursor: pointer;
+  }
 }
