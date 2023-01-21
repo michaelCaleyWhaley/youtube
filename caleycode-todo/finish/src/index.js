@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import "./style-globals.scss";
 import "./style.scss";
 
