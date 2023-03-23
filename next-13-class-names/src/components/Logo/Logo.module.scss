@@ -1,0 +1,30 @@
+.robocop {
+  border-radius: 100%;
+  animation: roll 10s linear forwards infinite;
+
+  // &:hover {
+  //   animation-play-state: paused;
+  // }
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
