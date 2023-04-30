@@ -1,17 +1,18 @@
 const canvas = document.getElementById("game");
-const GAME_WIDTH = canvas.offsetWidth;
-canvas.width = canvas.offsetWidth;
 
-const characterPos = [0, 150, 100, 100];
-const pokeballPos = [GAME_WIDTH, 200, 20, 20];
+const GAME_WIDTH = canvas.offsetWidth;
+const POKE_BALL_SIZE = 40;
+const CHARMANDER_HEIGHT = 150;
+const CHARMANDER_WIDTH = 125;
 const JUMP_SPEED = 20;
 
-let charmander;
-let charmanderActive = false;
+const characterPos = [0, 200, 125, CHARMANDER_HEIGHT];
+const pokeballPos = [GAME_WIDTH, 250, POKE_BALL_SIZE, POKE_BALL_SIZE];
 
+let charmander;
 let pokeball;
 let background;
-
+let charmanderActive = false;
 let score = 0;
 
 function drawCharacter() {
@@ -43,7 +44,7 @@ function drawPokeball() {
   } else {
     ctx.drawImage(pokeball, ...pokeballPos);
   }
-  if (pokeballPos[0] < -20) {
+  if (pokeballPos[0] < -POKE_BALL_SIZE) {
     pokeballPos[0] = GAME_WIDTH;
   } else {
     pokeballPos[0] -= 3;
@@ -56,18 +57,18 @@ function drawBackground() {
     background = new Image();
     background.src = "/assets/background.jpg";
     background.onload = () => {
-      ctx.drawImage(background, 0, 0, GAME_WIDTH, 300);
+      ctx.drawImage(background, 0, 0, GAME_WIDTH, 350);
     };
   } else {
-    ctx.drawImage(background, 0, 0, GAME_WIDTH, 300);
+    ctx.drawImage(background, 0, 0, GAME_WIDTH, 350);
   }
 }
 
 function charmanderFall() {
   let delay = 10;
   const fallInterval = setInterval(() => {
-    if (characterPos[1] >= 150) {
-      characterPos[1] = 150;
+    if (characterPos[1] >= 200) {
+      characterPos[1] = 200;
       delay = 5;
       clearInterval(fallInterval);
       charmanderActive = false;
@@ -95,9 +96,11 @@ function charmanderJump(e) {
 }
 
 function detectCollision() {
-  const horFrontCollide = pokeballPos[0] < characterPos[0] + 90;
-  const horBackCollide = pokeballPos[0] + 18 > characterPos[0];
-  const vertCollide = characterPos[1] + 100 > pokeballPos[1] + 20;
+  const horFrontCollide = pokeballPos[0] < characterPos[0] + CHARMANDER_WIDTH;
+  const horBackCollide =
+    pokeballPos[0] + (POKE_BALL_SIZE - 2) > characterPos[0];
+  const vertCollide =
+    characterPos[1] + CHARMANDER_HEIGHT > pokeballPos[1] + POKE_BALL_SIZE;
 
   if (horFrontCollide && horBackCollide) {
     score += 1;
@@ -121,7 +124,7 @@ function renderFrame() {
 
 function game() {
   const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, GAME_WIDTH, 250);
+  ctx.clearRect(0, 0, GAME_WIDTH, 350);
   renderFrame();
 
   if (!detectCollision()) {
@@ -132,6 +135,7 @@ function game() {
 }
 
 function init() {
+  canvas.width = canvas.offsetWidth;
   game();
   window.addEventListener("keydown", charmanderJump);
   document.addEventListener("click", charmanderJump);
