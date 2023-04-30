@@ -25,7 +25,7 @@ function drawCharacter() {
   } else {
     ctx.drawImage(charmander, ...characterPos);
   }
-  if (characterPos[0] > GAME_WIDTH - 200) {
+  if (characterPos[0] + 80 > GAME_WIDTH) {
     characterPos[0] = -80;
   } else {
     characterPos[0] += 3;
